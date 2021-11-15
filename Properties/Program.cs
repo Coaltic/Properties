@@ -10,7 +10,16 @@ namespace Properties
     {
         static void Main(string[] args)
         {
-            Console.Write("Properties");
+            Player player = new Player("MATTHEW");
+            
+
+            Console.WriteLine("Properties");
+            //Console.Write(player.health); //player.health = 100; Inaccessable due to protection
+            player.Shield = 100;
+            Console.WriteLine(player.Shield);
+            Console.WriteLine(player.Name);
+            player.Name = "NOT MATTHEW";
+            Console.WriteLine(player.Name);
             Console.ReadKey(true);
         }
     }
